@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="blur">
+
+        <div class="qidiruv">
+            <div class="one">
+                <label for="search">
+                    <input type="search" placeholder="Mahsulot nomini kiriting">
+                    <i class='bx bx-search'></i>
+                </label>
+            </div>
+            <div class="two">
+                <label for="submit">
+                    <input type="submit" class="sub" popovertarget="my-popover" value="+ Qo'shish">
+                </label>
+
+                <div id="my-popover" popover=manual>
+                    <button class="close-btn" popovertarget="my-popover" popovertargetaction="hide">
+                        <span aria-hidden="true"></span>
+                        <span class="sr-only"><i class='bx bx-x bx-tada bx-rotate-90'></i></span>
+                    </button>
+                    <form action="#">
+                        <h3>Mahsulot Qo'shish</h3>
+                        <label for="name">
+                            <input type="text" class="name" placeholder="Xaridor Ismi" required>
+                        </label>
+                        <label for="number">
+                            <input type="text" class="text" placeholder="Mahsulot nomi" required>
+                        </label>
+                        <label for="summa">
+                            <input type="date" class="summa" placeholder="Sotilgan Sana" required>
+                        </label>
+                        <label for="summa">
+                            <input type="number" class="summa" placeholder="Jami Summa" required>
+                        </label>
+                        <button class="plus">Qo'shish</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>F.I.SH, Tel:</th>
+                        <th>Mahsulotlar</th>
+                        <th>Sana</th>
+                        <th>Jami summa</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <!-- Narx -->
+        <div class="narxi">
+            <p>
+                Jami Summa:
+                <label for="text">
+                    <input type="text" readonly value="25 000 000" class="summ"> So'm
+                </label>
+            </p>
+        </div>
+
+    </div>
+
+    {% endblock %}

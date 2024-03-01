@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="blur">
+
+        <div class="qidiruv">
+            <div class="one">
+                <label for="search">
+                    <input type="search" placeholder="Mahsulot nomini kiriting">
+                    <i class='bx bx-search'></i>
+                </label>
+            </div>
+            <div class="two">
+                <label for="submit">
+                    <input type="submit" class="sub" popovertarget="my-popover" value="+ Qo'shish">
+                </label>
+
+                <div id="my-popover" popover=manual>
+                    <button class="close-btn" popovertarget="my-popover" popovertargetaction="hide">
+                        <span aria-hidden="true"></span>
+                        <span class="sr-only"><i class='bx bx-x bx-tada bx-rotate-90'></i></span>
+                    </button>
+                    <form action="#">
+                        <h3>Mahsulot Qo'shish</h3>
+                        <label for="name">
+                            <input type="text" class="name" placeholder="Mahsulot nomini kiriting" required>
+                        </label>
+                        <label for="number">
+                            <input type="number" class="number" placeholder="Mahsulot Soni" required>
+                        </label>
+                        <label for="narxi">
+                            <input type="number" class="narxi" placeholder="Kelish narxi" required>
+                        </label>
+                        <label for="summa">
+                            <input type="number" class="summa" placeholder="Sotilish narxi" required>
+                        </label>
+                        <button class="plus">Qo'shish</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="main">
+            <table>
+
+                
+                <thead>
+
+
+                    <tr>
+                        <th>№</th>
+                        <th>Mahsulot Nomi</th>
+                        <th>Soni</th>
+                        <th>Kelishi</th>
+                        <th>Sotilishi</th>
+                        <th>Sotildi</th>
+                        <th>Qoldi</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bolta</td>
+                        <td>200</td>
+                        <td>20 000</td>
+                        <td>25 000</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></i></td>
+                    </tr>
+    
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{%endblock%}
