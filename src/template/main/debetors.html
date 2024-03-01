@@ -54,16 +54,20 @@
                 </thead>
                 <tbody>
                     
+                {% for i in debtors %}    
                     <tr>
-                        <td>1</td>
-                        <td>Azizbek Nematov Turqishloq 976444842</td>
-                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
-                        <td>13.02.2024</td>
-                        <td>6 135 300</td>
+                        <td>{{i.id}}</td>
+                        <td>{{i.full_name}} {{i.phone_number}}</td>
+                        <td>{{i.product}}</td>
+                        <td>{{i.date}}</td>
+                        <td>{{i.price}}</td>
                         <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
                         <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
                     </tr>
                     
+                {% endfor %}
+                    
+
                 </tbody>
             </table>
         </div>
