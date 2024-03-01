@@ -1,0 +1,35 @@
+body {
+    background-color: #151719;
+    color: white;
+}
+
+.card {
+    background-color: #232323;
+}
+
+lSabel {
+    letter-spacing: 0.3px;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.829);
+}
+
+.form-control:focus {
+    color: white;
+    background-color: #151719;
+    border: 2px solid #232323;
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn {
+    background: #21943c;
+    border: #E8D426;
+    letter-spacing: 0.3px;
+    font-weight: 550;
+}
+
+.btn:hover {
+    background: #28a745;
+}

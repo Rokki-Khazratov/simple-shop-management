@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qurilish Mollari</title>
+    <!-- Css Stylesheeets -->
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/qarzdorlar.css">
+    <!-- Icon === -->
+    <link rel="shortcut icon" href="../Icon/img1.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <!--  Logo ==  -->
+            <a href="index.html" class="logo">
+                Qurilish <br> Xomashyolari
+            </a>
+            <!-- Navigation bar -->
+            <ul class="menu">
+                <span id="close-menu-btn" class="material-symbols-outlined"><i class='bx bx-x bx-spin'></i></span>
+                <li><a href="savdo.html">
+                        <i class='bx bxs-cart'></i>Savdo
+                    </a></li>
+                <li><a href="barcha.html">
+                        <i class='bx bx-cart'></i>Barcha Mahsulotlar
+                    </a></li>
+                <!-- <li><a href="kelishi.html">
+                <i class='bx bx-wallet'>Kelishi</i>
+            </a></li> -->
+                <li><a href="kamayganlar.html">
+                        <i class='bx bxs-bell-ring'></i>Kamayganlar
+                    </a></li>
+                <li><a href="qarzdorlar.html" class="active">
+                        <i class='bx bx-credit-card-front'></i>Qarzdorlar
+                    </a></li>
+                <li><a href="profil.html">
+                        <i class='bx bx-cog'></i>Profil
+                    </a></li>
+                <li><a href="../index.html">
+                        <i class='bx bx-exit'></i>Chiqish
+                    </a></li>
+            </ul>
+            <span id="hamburger-btn" class="material-symbols-outlined"><i class='bx bx-menu'></i></span>
+        </nav>
+    </header>
+    <!-- Main -->
+
+    <div id="blur">
+
+        <div class="qidiruv">
+            <div class="one">
+                <label for="search">
+                    <input type="search" placeholder="Mahsulot nomini kiriting">
+                    <i class='bx bx-search'></i>
+                </label>
+            </div>
+            <div class="two">
+                <label for="submit">
+                    <input type="submit" class="sub" popovertarget="my-popover" value="+ Qo'shish">
+                </label>
+
+                <div id="my-popover" popover=manual>
+                    <button class="close-btn" popovertarget="my-popover" popovertargetaction="hide">
+                        <span aria-hidden="true"></span>
+                        <span class="sr-only"><i class='bx bx-x bx-tada bx-rotate-90'></i></span>
+                    </button>
+                    <form action="#">
+                        <h3>Mahsulot Qo'shish</h3>
+                        <label for="name">
+                            <input type="text" class="name" placeholder="Xaridor Ismi" required>
+                        </label>
+                        <label for="number">
+                            <input type="text" class="text" placeholder="Mahsulot nomi" required>
+                        </label>
+                        <label for="summa">
+                            <input type="date" class="summa" placeholder="Sotilgan Sana" required>
+                        </label>
+                        <label for="summa">
+                            <input type="number" class="summa" placeholder="Jami Summa" required>
+                        </label>
+                        <button class="plus">Qo'shish</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>F.I.SH, Tel:</th>
+                        <th>Mahsulotlar</th>
+                        <th>Sana</th>
+                        <th>Jami summa</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Azizbek Nematov Turqishloq 976444842</td>
+                        <td>Samarez 3kg, Mix 5kg, Aboy 20kv, 15x5 taxta 100ta, Shifr 150ta, tunuka 100kv</td>
+                        <td>13.02.2024</td>
+                        <td>6 135 300</td>
+                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
+                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- Narx -->
+        <div class="narxi">
+            <p>
+                Jami Summa:
+                <label for="text">
+                    <input type="text" readonly value="25 000 000" class="summ"> So'm
+                </label>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- alert tahrirlash -->
+    <div id="ali">
+        <a href="#" onclick="toggle()"><i class='bx bx-x bx-tada'></i></a>
+        <h3>Tahrirlash</h3>
+        <form action="qarzdorlar.html">
+            <input type="text" placeholder="Xaridor Ismi" required>
+            <input type="text" placeholder="Mahsulot Nomi" required>
+            <input type="number" placeholder="Jami Summa" required>
+            <input type="date" placeholder="Sana" required>
+            <button>Saqlash</button>
+
+        </form>
+    </div>
+    <div id="vali">
+        <h3>Ushbu Xaridorni o'chirishni xohlaysizmi?</h3>
+        <a href="qarzdorlar.html">Ha</a>
+        <a href="#" onclick="sorov()">Yo'q</a>
+    </div>
+
+    <!-- Javascript ====== -->
+    <script src="../Script/main.js"></script>
+</body>
+
+</html>

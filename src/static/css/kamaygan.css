@@ -1,0 +1,287 @@
+.qidiruv {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    box-sizing: border-box;
+
+}
+
+.qidiruv div {
+    width: 50%;
+}
+
+.qidiruv .one {
+    text-indent: 10%;
+}
+
+.qidiruv .two {
+    text-align: right;
+}
+
+.one input {
+    width: 50%;
+    height: 35px;
+    text-decoration: none;
+    border: 2px solid rgb(5, 227, 5);
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #232323;
+    color: white;
+    outline: none;
+}
+
+.one i {
+    position: relative;
+    left: -7.7%;
+    top: 3px;
+    color: rgb(5, 227, 5);
+    font-size: 20px;
+}
+
+.qidiruv .sub {
+    width: 130px;
+    height: 35px;
+    border-radius: 6px;
+    border: 3px solid #21943c;
+    font-size: 16px;
+    background-color: #21943c;
+    color: white;
+    font-weight: 550;
+    letter-spacing: 0.6px;
+    transition: ease 0.3s;
+
+}
+
+.qidiruv .sub:active {
+    background-color: #232323;
+    color: #21943c;
+    font-weight: 650;
+    letter-spacing: 1.2px;
+}
+
+.main {
+    width: 100%;
+    height: 80vh;
+    padding: 10px 30px;
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+    background-color: #e0091edc;
+}
+
+table,
+tr,
+th,
+td {
+    border: 2px solid #151719;
+    border-spacing: 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.837);
+    font-weight: 600;
+    text-align: center;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+th:first-child {
+    width: 5%;
+}
+
+td:nth-child(2) {
+    width: 30%;
+    text-align: left;
+    text-indent: 20px;
+}
+
+td:nth-child(8) a {
+    width: 8%;
+    font-size: 22px;
+    color: #21943c;
+}
+
+td:nth-child(8):active a {
+    color: white;
+    transition: ease 0.3s;
+}
+
+td:last-child a {
+    width: 8%;
+    font-size: 22px;
+    color: #232323;
+}
+
+td:last-child:active a {
+    color: white;
+    transition: ease 0.3s;
+}
+
+/* media */
+
+@media (max-width: 1025px) {
+
+    table tr td,
+    th {
+        font-size: 14px;
+    }
+
+    .one i {
+        position: relative;
+        left: -9.5%;
+        top: 2.5px;
+        color: rgb(5, 227, 5);
+        font-size: 16px;
+        z-index: 1;
+    }
+
+    .one input {
+        width: 50%;
+        height: 30px;
+        text-decoration: none;
+        border: 2px solid rgb(5, 227, 5);
+        border-radius: 6px;
+        font-size: 14px;
+        background-color: #232323;
+        color: white;
+    }
+
+    .qidiruv {
+        width: 100%;
+        height: 7.7vh;
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+        box-sizing: border-box;
+
+    }
+
+    .qidiruv .sub {
+        width: 110px;
+        height: 33px;
+        border-radius: 6px;
+        border: 2px solid #21943c;
+        font-size: 14px;
+        background-color: #21943c;
+        color: white;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        transition: ease 0.2s;
+
+    }
+
+    .main {
+        width: 100%;
+        height: 75vh;
+        padding: 5px 20px;
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 770px) {
+    td:last-child a {
+        width: auto;
+        font-size: 16px;
+    }
+
+    td:nth-child(8) a {
+        width: auto;
+        font-size: 16px;
+    }
+
+    table tr td,
+    th {
+        font-size: 12px;
+    }
+
+    .one i {
+        display: none;
+    }
+
+    .one input {
+        width: 50%;
+        height: 30px;
+        text-decoration: none;
+        border: 2px solid rgb(5, 227, 5);
+        border-radius: 6px;
+        font-size: 12px;
+        background-color: #232323;
+        color: white;
+    }
+}
+
+@media (max-width: 430px) {
+    .one input {
+        width: 90%;
+        height: 25px;
+        text-decoration: none;
+        border: 1px solid rgb(5, 227, 5);
+        border-radius: 6px;
+        font-size: 11px;
+        background-color: #232323;
+        color: white;
+    }
+
+    .qidiruv {
+        width: 100%;
+        height: 7.7vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+    }
+
+    .qidiruv .one {
+        text-indent: 5%;
+    }
+
+    .qidiruv .sub {
+        width: 90px;
+        height: 25px;
+        border-radius: 6px;
+        border: 2px solid #21943c;
+        font-size: 12px;
+        background-color: #21943c;
+        color: white;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        transition: ease 0.2s;
+
+    }
+
+    .qidiruv .sub:active {
+        background-color: #232323;
+        color: #21943c;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+    }
+
+    table tr td,
+    th {
+        font-size: 11px;
+    }
+
+    td:last-child a {
+        width: auto;
+        font-size: 14px;
+    }
+
+    td:nth-child(8) a {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .main {
+        width: 100%;
+        height: 75vh;
+        padding: 0px 5px;
+        overflow: scroll;
+    }
+}

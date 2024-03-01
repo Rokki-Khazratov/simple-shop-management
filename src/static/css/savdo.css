@@ -1,0 +1,674 @@
+.one {
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    text-indent: 6%;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.one input {
+    width: 20%;
+    height: 35px;
+    text-decoration: none;
+    border: 2px solid rgb(5, 227, 5);
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #232323;
+    color: white;
+    margin: 1% 0;
+    outline: none;
+}
+
+.one i {
+    position: relative;
+    left: -3%;
+    top: 1.1%;
+    color: rgb(5, 227, 5);
+    font-size: 16px;
+}
+
+
+.mahsulot {
+    width: 100%;
+    height: 80vh;
+    overflow: scroll;
+    padding: 5px 10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    /* display: flex; */
+}
+
+.mahsulot table:first-child {
+    width: 61%;
+}
+
+.mahsulot table:last-child {
+    width: 37%;
+}
+
+.mahsulot table {
+    display: inline-table;
+    background-color: #232323;
+    margin: 5px 2px 70px;
+    overflow: scroll;
+    margin: 0 5px;
+    box-sizing: border-box;
+}
+
+table,
+tr,
+th,
+td {
+    border: 2px solid #151719;
+    border-spacing: 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+th {
+    padding: 6px;
+}
+
+th:first-child {
+    width: 8%;
+}
+
+td:nth-child(2) {
+    width: 35%;
+    text-align: left;
+    text-indent: 5%;
+}
+
+th:nth-child(3) {
+    width: 20%;
+}
+
+th:nth-child(4) {
+    width: 20%;
+}
+
+td:last-child {
+    color: #21943c;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mahsulot table:last-child td:nth-child(3) input {
+    font-size: 18px;
+    width: 100%;
+    padding: 2px 0;
+    text-align: center;
+    border: 3px solid #21943c;
+    border-radius: 3px;
+    background-color: #232323;
+    color: white;
+}
+
+.mahsulot table:last-child td:last-child {
+    color: #e0091e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.narxi {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #232323;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px 50px;
+    font-size: 22px;
+    color: lime;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.summ {
+    width: 150px;
+    height: 35px;
+    text-decoration: none;
+    border: 3px solid #21943c;
+    border-radius: 6px;
+    padding: 0px;
+    margin: 1px 25px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: white;
+    background-color: #21943c;
+    text-align: center;
+    outline: none;
+}
+
+.sub,
+.res,
+.but {
+    width: 130px;
+    height: 40px;
+    text-decoration: none;
+    border: 3px solid #21943c;
+    border-radius: 6px;
+    padding: px;
+    margin: 0px 5px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    background-color: #21943c;
+    color: white;
+}
+
+.res {
+    background-color: #e0091e;
+    border-color: #e0091e;
+}
+
+.sub {
+    background-color: rgb(131, 191, 12);
+    border-color: rgb(131, 191, 12);
+    color: rgb(232, 221, 221);
+
+
+}
+
+.sub:active,
+.res:active,
+.but:active {
+    background-color: #232323;
+    font-weight: 700;
+    transition: ease 0.3s;
+}
+
+/* media query */
+
+@media (max-width: 1250px) {
+    .mahsulot {
+        width: 100%;
+    }
+
+    .mahsulot table:first-child {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mahsulot table:last-child {
+        width: 100%;
+    }
+
+    .one {
+        width: 100%;
+        height: 4.4vh;
+        align-items: center;
+        text-indent: 6%;
+        align-items: center;
+    }
+
+    .one i {
+        position: relative;
+        left: -3.3%;
+        top: 1.1%;
+        color: rgb(5, 227, 5);
+        font-size: 16px;
+    }
+
+    .sub,
+    .res,
+    .but {
+        width: 120px;
+        height: 40px;
+        text-decoration: none;
+        border: 3px solid #21943c;
+        border-radius: 6px;
+        padding: px;
+        margin: 0px 5px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        background-color: #21943c;
+        color: white;
+    }
+
+    .res {
+        background-color: #e0091e;
+        border-color: #e0091e;
+    }
+
+    .sub {
+        background-color: rgb(131, 191, 12);
+        border-color: rgb(131, 191, 12);
+        color: rgb(232, 221, 221);
+
+
+    }
+
+    .sub:active,
+    .res:active,
+    .but:active {
+        background-color: #232323;
+        font-weight: 700;
+        transition: ease 0.2s;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .mahsulot table tr td,
+    th {
+        font-size: 18px;
+    }
+
+    .one i {
+        display: none;
+    }
+
+    .one input {
+        width: 40%;
+        height: 35px;
+        text-decoration: none;
+        border: 2px solid rgb(5, 227, 5);
+        border-radius: 6px;
+        font-size: 16px;
+        background-color: #232323;
+        color: white;
+        margin: 1% 0;
+    }
+
+    .narxi {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        background-color: #232323;
+        position: fixed;
+        bottom: 0px;
+        padding: 10px 10px;
+        font-size: 22px;
+        color: lime;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+}
+
+@media (max-width: 900px) {
+    .narxi {
+        display: block;
+        width: 100%;
+        height: 120px;
+        background-color: #232323;
+        position: fixed;
+        bottom: 0px;
+        padding: 5px 50px;
+        font-size: 22px;
+        color: lime;
+
+    }
+
+    .narxi p {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .narxi p:last-child {
+        text-align: right;
+    }
+
+    .mahsulot table tr td,
+    th {
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+@media(max-width: 550px) {
+    .mahsulot {
+        height: 75vh;
+    }
+
+    .narxi {
+        display: block;
+        width: 100%;
+        height: 100px !important;
+        background-color: #232323;
+        position: fixed;
+        bottom: 0px;
+        padding: 5px 10px;
+        font-size: 20px;
+        color: lime;
+        box-sizing: border-box;
+
+    }
+
+    .mahsulot table tr td,
+    th {
+        font-size: 14px;
+        font-weight: 100;
+    }
+
+    .mahsulot table:last-child td:nth-child(3) input {
+        font-size: 12px;
+        padding: 0;
+    }
+
+    .summ {
+        width: 120px;
+        height: 30px;
+        text-decoration: none;
+        border: 1px solid #21943c;
+        border-radius: 6px;
+        padding: 0px;
+        margin: 1px 25px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        color: white;
+        background-color: #21943c;
+        text-align: center;
+    }
+
+    .sub,
+    .res,
+    .but {
+        width: 120px;
+        height: 30px;
+        text-decoration: none;
+        border: 2px solid #21943c;
+        border-radius: 6px;
+        margin: 0px 5px;
+        font-size: 16px;
+        background-color: #21943c;
+        color: white;
+    }
+
+    .res {
+        background-color: #e0091e;
+        border-color: #e0091e;
+    }
+
+    .sub {
+        background-color: rgb(131, 191, 12);
+        border-color: rgb(131, 191, 12);
+
+
+    }
+
+    .sub:active,
+    .res:active,
+    .but:active {
+        background-color: #232323;
+        font-weight: 550;
+        transition: ease 0.2s;
+    }
+
+    .one {
+        height: 50px !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .one input {
+        width: 50% !important;
+        height: 30px;
+        text-decoration: none;
+        border: 1px solid rgb(5, 227, 5);
+        border-radius: 6px;
+        font-size: 10px;
+        background-color: #232323;
+        color: white;
+        margin: 0;
+        margin-top: 7px !important;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .narxi {
+        display: block;
+        width: 100%;
+        height: 120px;
+        background-color: #232323;
+        position: fixed;
+        bottom: 0px;
+        padding: 5px 10px;
+        font-size: 18px;
+        color: lime;
+
+    }
+
+    .mahsulot table tr td,
+    th {
+        font-size: 12px;
+    }
+
+    .summ {
+        width: 100px;
+        height: 30px;
+        text-decoration: none;
+        border: 1px solid #21943c;
+        border-radius: 6px;
+        padding: 0px;
+        margin: 1px 25px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        color: white;
+        background-color: #21943c;
+        text-align: center;
+        outline: none;
+    }
+
+    .sub,
+    .res,
+    .but {
+        width: 100px;
+        height: 30px;
+        text-decoration: none;
+        border: 2px solid #21943c;
+        border-radius: 6px;
+        margin: 0px 5px;
+        font-size: 14px;
+        background-color: #21943c;
+        color: white;
+    }
+
+    .res {
+        background-color: #e0091e;
+        border-color: #e0091e;
+    }
+
+    .sub {
+        background-color: rgb(131, 191, 12);
+        border-color: rgb(131, 191, 12);
+
+
+    }
+
+    .sub:active,
+    .res:active,
+    .but:active {
+        background-color: #232323;
+        transition: ease 0.2s;
+    }
+
+    .one input {
+        width: 40%;
+        height: 30px;
+        text-decoration: none;
+        border: 1px solid rgb(5, 227, 5);
+        border-radius: 6px;
+        font-size: 12px;
+        background-color: #232323;
+        color: white;
+        margin: 1% 0;
+    }
+}
+
+@media (max-width: 1025px) {
+    .one {
+        width: 100%;
+        height: 8vh;
+        align-items: center;
+        text-indent: 6%;
+        align-items: center;
+    }
+
+    .one input {
+        width: 35%;
+        height: 30px;
+        text-decoration: none;
+        border: 1px solid rgb(5, 227, 5);
+        border-radius: 6px;
+        font-size: 14px;
+        background-color: #232323;
+        color: white;
+        margin: 1% 0;
+        outline: none;
+    }
+}
+
+/* Nasiya Savdo */
+
+
+#savdo.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#tasdiq {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 10px 15px;
+    background-color: #151719;
+    color: #fff;
+    font-weight: 500;
+    margin: 0 auto;
+    text-align: center;
+    border: 3px solid rgb(131, 191, 12);
+    box-shadow: 0 0 7px 4px rgb(131, 191, 12);
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#tasdiq.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+}
+
+#tasdiq a {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.6rem;
+    font-size: 30px;
+    color: #fff;
+
+}
+
+#tasdiq form input {
+    width: 80%;
+    margin: 7px 15px;
+    box-sizing: border-box;
+    padding: 4px 0;
+    background-color: #232323;
+    border: 2px solid rgb(131, 191, 12);
+    border-radius: 7px;
+    text-decoration: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: rgb(131, 191, 12);
+    text-indent: 3%;
+    transition: all ease 0.3s;
+}
+
+#tasdiq h3 {
+    font-weight: 530;
+    letter-spacing: 1.5px;
+    word-spacing: 5px;
+    font-size: 25px;
+
+}
+
+#tasdiq input:focus {
+    width: 80%;
+    margin: 7px 15px;
+    box-sizing: border-box;
+    padding: 3px;
+    background-color: #151719;
+    border-radius: 7px;
+    color: #fff;
+    outline: none;
+}
+
+#tasdiq button {
+    width: 80%;
+    margin: 13px;
+    box-sizing: border-box;
+    padding: 4px 0;
+    background-color: rgb(131, 191, 12);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 550;
+    letter-spacing: 0.7px;
+    font-size: 16px;
+}
+
+#tasdiq button:hover {
+    background-color: rgba(5, 227, 5, 0.67);
+    box-shadow: 0 0 2px 1px rgba(5, 227, 5, 0.6);
+    letter-spacing: 1px;
+
+}
+
+#tasdiq button:active {
+    background-color: rgba(5, 227, 5, 0.923);
+    box-shadow: 0 0 3px 1px rgb(5, 227, 5);
+    letter-spacing: 2px;
+}
+
+/*  Responsive Alert Tahrirlash  */
+
+@media (max-width: 500px) {
+    #tasdiq {
+        font-weight: 400;
+        padding: 15px 5px;
+        margin: 0 auto;
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        top: 35%;
+        border: 2px solid rgb(5, 227, 5);
+        border-radius: 13px 5px / 5px;
+        box-shadow: 0 0 4px 1px rgb(5, 189, 5);
+    }
+
+    #tasdiq input {
+        width: 85%;
+        margin: 5px;
+        box-sizing: border-box;
+        padding: 3px 0;
+        background-color: #232323;
+        border: 2px solid rgb(5, 227, 5);
+        border-radius: 6px;
+        text-decoration: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: rgb(5, 227, 5);
+        text-indent: 3%;
+        transition: all ease 0.3s;
+        font-size: 12px;
+    }
+}

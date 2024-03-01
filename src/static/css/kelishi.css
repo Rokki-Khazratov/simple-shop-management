@@ -1,0 +1,133 @@
+.qidiruv {
+    width: 100%;
+    height: 8vh;
+    background-color: ;
+    display: flex;
+    padding: 0.45% 5%;
+    align-items: center;
+
+}
+
+.qidiruv p {
+    width: 50%;
+}
+
+.qidiruv p:first-child {
+    text-indent: 30px;
+}
+
+.qidiruv p:last-child {
+    text-align: right;
+}
+
+.qidiruv .search {
+    width: 500px;
+    height: 35px;
+    text-decoration: none;
+    border: 3px solid #21943c;
+    border-radius: 6px 0 0 6px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    background-color: #232323;
+    color: white;
+    letter-spacing: 0.6px;
+}
+
+.qidiruv i {
+    padding: 5px 7px;
+    position: relative;
+    top: 5px;
+    left: -4px;
+    background-color: #21943c;
+    font-size: 25px;
+    border-radius: 0 6px 6px 0;
+}
+
+.qidiruv .sub {
+    width: 150px;
+    height: 35px;
+    border-radius: 6px;
+    border: 3px solid #21943c;
+    font-size: 18px;
+    background-color: #21943c;
+    color: white;
+    font-weight: 550;
+    letter-spacing: 0.6px;
+    transition: ease 0.3s;
+
+}
+
+.qidiruv .sub:active {
+    background-color: #232323;
+    color: #21943c;
+    font-weight: 650;
+    letter-spacing: 1.2px;
+}
+
+.main {
+    width: 100%;
+    height: 75vh;
+    padding: 10px 30px;
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+    background-color: #232323;
+}
+
+table,
+tr,
+th,
+td {
+    border: 2px solid #151719;
+    border-spacing: 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+th:first-child {
+    width: 5%;
+}
+
+td:nth-child(2) {
+    width: 30%;
+    text-align: left;
+    text-indent: 20px;
+}
+
+td:nth-child(7) {
+    width: 8%;
+    font-size: 22px;
+    color: #21943c;
+}
+
+td:nth-child(7):active {
+    color: white;
+    transition: ease 0.3s;
+}
+
+td:last-child {
+    width: 8%;
+    font-size: 22px;
+    color: #e0091e;
+}
+
+td:last-child:active {
+    color: white;
+    transition: ease 0.3s;
+}
+
+.class {
+    font-family: 'Times New Roman', Times, serif;
+}
