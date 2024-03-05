@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Product, Debtors
 
 def index(request):
     
@@ -11,9 +11,9 @@ def index(request):
 
 
 def all_products(request):
-    
+    products = Product.objects.all()
     context = {
-
+        'products' : products, 
     }
     return render(request, 'main/all_products.html', context)
 
@@ -29,9 +29,9 @@ def notifacation(request):
 
 
 def debetors(request):
-    
+    debtors = Debtors.objects.all()
     context = {
-
+        'debtors' : debtors
     }
     return render(request, 'main/debetors.html', context)
 
