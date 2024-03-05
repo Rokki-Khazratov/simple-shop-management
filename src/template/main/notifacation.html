@@ -60,17 +60,18 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                    {% for i in products%}
+
                     <tr>
-                        <td>1</td>
-                        <td>Bolta</td>
-                        <td>200</td>
-                        <td>20 000</td>
-                        <td>25 000</td>
-                        <td>100</td>
-                        <td>100</td>
+                        <td>{{i.id}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.quantity}}</td>
                         <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
                         <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></i></td>
                     </tr>
+                    {% endfor %}
+
     
 
                 </tbody>

@@ -20,9 +20,9 @@ def all_products(request):
 
 
 def notifacation(request):
-    limits = Product.objects.filter(quantity<20)
+    products = Product.objects.filter(quantity__lt = 20)
     context = {
-        'limits' : limits, 
+        'products' : products, 
     }
     return render(request, 'main/notifacation.html', context)
 
