@@ -18,3 +18,4 @@ class Debtors(m.Model):
 
     def __str__(self):
         return self.full_name
+    
