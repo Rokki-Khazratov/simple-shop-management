@@ -1,6 +1,54 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qurilish Mollari</title>
+    <!-- Css Stylesheeets -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Icon === -->
+    <link rel="shortcut icon" href="{% static 'icon/img1.jpg' %}" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/savdo.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <!--  Logo ==  -->
+            <a href="index.html" class="logo">
+                Qurilish <br> Xomashyolari
+            </a>
+            <!-- Navigation bar -->
+            <ul class="menu">
+                <span id="close-menu-btn" class="material-symbols-outlined"><i class='bx bx-x bx-spin'></i></span>
+                <li><a href="savdo.html" class="active">
+                        <i class='bx bxs-cart'></i>Savdo
+                    </a></li>
+                <li><a href="barcha.html">
+                        <i class='bx bx-cart'></i>Barcha Mahsulotlar
+                    </a></li>
+                <!-- <li><a href="kelishi.html">
+                <i class='bx bx-wallet'>Kelishi</i>
+            </a></li> -->
+                <li><a href="kamayganlar.html">
+                        <i class='bx bxs-bell-ring'></i>Kamayganlar
+                    </a></li>
+                <li><a href="qarzdorlar.html">
+                        <i class='bx bx-credit-card-front'></i>Qarzdorlar
+                    </a></li>
+                <li><a href="profil.html">
+                        <i class='bx bx-cog'></i>Profil
+                    </a></li>
+                <li><a href="index.html">
+                        <i class='bx bx-exit'></i>Chiqish
+                    </a></li>
+            </ul>
+            <span id="hamburger-btn" class="material-symbols-outlined"><i class='bx bx-menu'></i></span>
+        </nav>
+    </header>
 
     <div id="savdo">
 
@@ -22,17 +70,44 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    {%for i in products %}
+                    <tr>
+                        <td>{{i.id}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.quantity}}</td>
+                        <td>{{i.price}}</td>
+                        <td><i class='bx bx-plus b'></i></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+
+
+
+
+<!-- trade side,kinda table for adding products and createing kinda cart for sumerize price and calculate -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Nomi</th>
+                        <th>Soni</th>
+                        <th>X</th>
+                    </tr>
+                </thead>
+                <tbody width="100%">
                     <tr>
                         <td>1</td>
                         <td>Bolta</td>
-                        <td>50</td>
-                        <td>25 000</td>
-                        <td><i class='bx bx-plus b'></i></td>
+                        <td><input class="num" placeholder="Soni" value="1" type="number"></td>
+                        <td><i class='bx bx-minus b'></i></td>
                     </tr>
-            
                 </tbody>
             </table>
+
+
+            
         </div>
         <div class="narxi">
             <p>
@@ -55,4 +130,21 @@
         </div>
 
     </div>
-    {% endblock%}
+
+    <div id="tasdiq">
+        <form action="savdo.html">
+            <a href="#" onclick="nasiya()"><i class='bx bx-x bx-tada'></i></a>
+            <h3>Nasiya Savdo</h3>
+            <input type="text" placeholder="Xaridor Ismi" required>
+            <input type="text" placeholder="Mahsulotlar" readonly>
+            <input type="number" placeholder="Jami Summa" readonly>
+            <input type="date" placeholder="Sana" required>
+            <button>Tasdiqlash</button>
+        </form>
+    </div>
+
+    <!-- Javascript ====== -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

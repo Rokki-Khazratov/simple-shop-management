@@ -39,8 +39,9 @@ def debetors(request):
 
 
 def trade(request):
+    products = Product.objects.all()
     
     context = {
-
+        'products':  products
     }
     return render(request, 'main/trade.html', context)
