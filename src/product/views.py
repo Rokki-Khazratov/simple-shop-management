@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.urls import reverse
+from django.contrib import messages
 from .models import Product, Debtors
+
 
 def index(request):
     
@@ -40,8 +43,22 @@ def debetors(request):
 
 def trade(request):
     products = Product.objects.all()
-    
+    ids_to_retrieve = []
+    cart = Product.objects.filter(id__in=ids_to_retrieve)
+
     context = {
-        'products':  products
+        'products':  products,
+        'cart':  cart,
     }
     return render(request, 'main/trade.html', context)
+
+
+def delete_product(request, product_id):
+    if request.method == 'POST':
+        try:
+            product = Product.objects.get(id=product_id)
+            product.delete()
+            messages.success(request, 'Product deleted successfully')
+        except Product.DoesNotExist:
+            messages.error(request, 'Product not found')
+    return redirect(reverse('all_products'))

@@ -13,7 +13,9 @@
 
             <div class="two">
                 <label for="submit">
-                    <input type="submit" class="sub" popovertarget="my-popover" value="+ Qo'shish">
+
+                    <a class="sub" href="/admin/product/product/add/">+ Qo'shish</a>
+
                 </label>
 
                 <div id="my-popover" popover=manual>
@@ -63,12 +65,15 @@
                         <td>{{i.quantity}}</td>
                         <td>{{i.price}}</td>
                         
-                        <td><a href="#" onclick="toggle()">
-                                <i class='bx bxs-pencil'></i>
-                            </a></td>
-                        <td><a href="#" onclick="sorov()">
-                                <i class='bx bxs-trash-alt'></i>
-                            </a></td>
+                        <td><a href="/admin/product/product/{{i.id}}/change/"><i class='bx bxs-pencil'></i></a></td>
+
+                        <td>
+                            <form action="{% url 'delete_product' i.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="delete-btn"><i class='bx bxs-trash-alt'></i></button>
+                            </form>
+                        </td>                        
+
                     </tr>
                 
                 {% endfor %}
