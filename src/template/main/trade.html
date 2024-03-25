@@ -115,13 +115,12 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Total Price</h2>
-            <p id="total-price-text">Total Price: <span id="total-price"></span> So'm</p>
-            <button id="confirm-btn">OK</button>
+            <h2>Tasdiqlandi !</h2>
+            <a href="{% url 'trade' %}" class="confirm-btn">OK</a>
         </div>
     </div>
-    
-    
+
+
 
 
     <div id="tasdiq">
@@ -156,11 +155,9 @@
                         newRow.innerHTML = `
                     <td>${product.children[1].innerText}</td>
                     <td>${product.children[3].innerText}</td>
-                    <td><input type="number" value="1" min="1"></td>
+                    <td><input type="number" name="quantity_{{ product.id }}" value="1" min="1"></td>
                 `;
                         quantityBody.appendChild(newRow);
-                        const quantityInput = newRow.querySelector("input[type='number']");
-                        quantityInput.addEventListener("input", updateTotalSum);
                     }
                 });
             });
@@ -175,37 +172,39 @@
                 });
                 totalSumInput.value = totalSum.toFixed(2);
             }
-        });
 
+            // Listen for input changes in quantity fields
+            quantityBody.addEventListener("input", updateTotalSum);
 
-        // Get the modal
-        var modal = document.getElementById("myModal");
+            // Get the modal
+            var modal = document.getElementById("myModal");
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+            // Get the button that opens the modal
+            var confirmButton = document.querySelector(".but");
 
-        // When the user clicks the button, open the modal 
-        // Open modal and display total price when the button is clicked
-        document.querySelector(".but").addEventListener("click", function () {
-            modal.style.display = "block";
-            var totalPriceSpan = document.getElementById("total-price");
-            totalPriceSpan.textContent = totalSum.toFixed(2); // Update total sum value
-        });
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
 
+            // When the user clicks the button, open the modal 
+            confirmButton.addEventListener("click", function () {
+                modal.style.display = "block";
+                var totalPriceSpan = document.getElementById("total-price");
+                totalPriceSpan.textContent = totalSum.toFixed(2); // Update total sum value
+            });
 
-
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        };
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
                 modal.style.display = "none";
-            }
-        };
+            };
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+
 
 
 
