@@ -42,15 +42,29 @@ def debetors(request):
 
 
 def trade(request):
-    products = Product.objects.all()
-    ids_to_retrieve = []
-    cart = Product.objects.filter(id__in=ids_to_retrieve)
+    if request.method == 'POST':
+        ids_to_retrieve = request.POST.getlist('product_id')
+        cart = Product.objects.filter(id__in=ids_to_retrieve)
 
-    context = {
-        'products':  products,
-        'cart':  cart,
-    }
-    return render(request, 'main/trade.html', context)
+        for product in cart:
+            form_quantity = request.POST.get('quantity_' + str(product.id))
+            print(form_quantity)
+            
+            try:
+                form_quantity = int(form_quantity)
+            except (TypeError, ValueError):
+                form_quantity = 0
+                print('ERROR: FORM QUANTITY TYPE ERROR!!')
+                
+            # Update product quantity
+            product.quantity -= form_quantity 
+            product.save()
+
+        return render(request, 'main/trade.html', {'cart': cart})
+    else:
+        products = Product.objects.all()
+        return render(request, 'main/trade.html', {'products': products})
+
 
 
 def delete_product(request, product_id):

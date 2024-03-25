@@ -63,8 +63,15 @@
                         <td>{{i.id}}</td>
                         <td>{{i.name}}</td>
                         <td>{{i.quantity}}</td>
-                        <td><a href="#" onclick="toggle()"><i class='bx bxs-pencil'></i></a></td>
-                        <td><a href="#" onclick="sorov()"><i class='bx bxs-trash-alt'></i></a></i></td>
+                        <td><a href="/admin/product/product/{{i.id}}/change/"><i class='bx bxs-pencil'></i></a></td>
+
+                        <td>
+                            <form action="{% url 'delete_product' i.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="delete-btn"><i class='bx bxs-trash-alt'></i></button>
+                            </form>
+                        </td>                      
+                    
                     </tr>
                     {% endfor %}
 

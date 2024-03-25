@@ -99,7 +99,7 @@
 
             <p>
                 <label for="submit">
-                    <input type="submit" class="sub" value="Nasiya" onclick="nasiya()">
+                    <a class="sub" href="/admin/product/debtors/add/">
                 </label>
                 <label for="reset">
                     <a class="res" href="{% url 'trade' %}">Bekor qilish</a>
@@ -117,7 +117,7 @@
             <span class="close">&times;</span>
             <h2>Total Price</h2>
             <p id="total-price-text">Total Price: <span id="total-price"></span> So'm</p>
-            <button id="confirm-btn">OK</button>
+            <a id="confirm-btn" href="{% url 'trade' %}" >OK</a>
         </div>
     </div>
     
